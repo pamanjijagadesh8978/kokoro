@@ -1,0 +1,11 @@
+# Core Streamlit App Dependencies
+streamlit>=1.38.0
+numpy>=1.26.0
+soundfile>=0.12.1
+
+# TTS library (you must ensure this package is installable)
+kokoro
+
+# Optional: if your TTS model depends on PyTorch or TensorFlow
+torch>=2.0.0  # uncomment if kokoro uses PyTorch
+# tensorflow>=2.15.0  # uncomment if kokoro uses TensorFlow
