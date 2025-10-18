@@ -1,11 +1,26 @@
-# Core Streamlit App Dependencies
+# ==============================
+# Streamlit TTS App Requirements
+# ==============================
+
+# --- Core Streamlit Dependencies ---
 streamlit>=1.38.0
 numpy>=1.26.0
 soundfile>=0.12.1
 
-# TTS library (you must ensure this package is installable)
-kokoro
+# --- Kokoro TTS ---
+kokoro>=0.9.4
 
-# Optional: if your TTS model depends on PyTorch or TensorFlow
-torch>=2.0.0  # uncomment if kokoro uses PyTorch
-# tensorflow>=2.15.0  # uncomment if kokoro uses TensorFlow
+# --- Backend Deep Learning Framework ---
+# Kokoro depends on PyTorch for inference
+torch>=2.0.0
+
+# --- Optional utilities (safe to include) ---
+# These help with TTS phoneme generation and display
+ipython>=8.0.0
+
+# ==============================
+# Notes:
+# - If deploying on Streamlit Cloud, also create a "packages.txt" file
+#   with the line: espeak-ng
+#   (needed for Kokoro's text normalization)
+# ==============================
